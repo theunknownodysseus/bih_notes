@@ -1,0 +1,184 @@
+Build a full-stack real-time collaborative notes application called Notes Edu Mamae using JavaScript, Node.js, React.js, Firebase Auth, and Firestore. Generate the entire codebase so I can download and run it immediately. Follow the requirements below carefully.
+
+🔥 1. TECH STACK
+
+Frontend: React.js + Vite
+
+Backend: Node.js (Express optional — only if needed)
+
+Database: Firebase Firestore
+
+Auth: Firebase Google Sign-In (OAuth client keys)
+
+Hosting: Firebase Hosting
+
+Storage: Firebase Storage (optional, if needed)
+
+I already have:
+
+Firebase project
+
+Firestore enabled
+
+Firebase Auth enabled
+
+OAuth client keys
+
+Use only JavaScript, not TypeScript.
+
+🔥 2. CORE MVP FEATURES TO IMPLEMENT
+1. Authentication
+
+Google Sign-in using Firebase Auth
+
+Redirect to Dashboard after login
+
+Store basic profile details in Firestore (optional)
+
+2. Notes CRUD
+
+Create note
+
+Edit note (auto-save every few seconds or on keypress debounce)
+
+Delete note
+
+Pin/unpin note
+
+Real-time syncing using Firestore listeners
+
+3. Sharing & Permissions
+
+Share notes via unique link (like Canva)
+
+Two permissions:
+
+Viewer
+
+Editor
+
+Add collaborator by email
+
+Collaborators stored inside note document in Firestore
+
+4. Realtime Collaboration
+
+Multiple users editing the same note
+
+Cursor tracking optional
+
+Firestore listeners to sync changes instantly
+
+Prevent overwrite conflicts using content merge strategy
+
+5. Exporting Notes
+
+Export note as:
+
+PDF
+
+Plain text (.txt)
+
+Implement simple export first (no fancy formatting)
+
+🔥 3. APP FLOW / WIREFRAME FLOW
+Screens
+
+Login Page
+
+Dashboard
+
+List of notes
+
+Pinned notes section
+
+Create Note button
+
+Logout button
+
+Editor Page
+
+Title field
+
+Editable note body (auto-saving)
+
+Export button (PDF / TXT)
+
+Share button → Generates share link
+
+Collaborators list
+
+Shared View Page
+
+If viewer: readonly
+
+If editor: full edit access
+
+🔥 4. FOLDER STRUCTURE
+root/
+ ├─ backend/ (if needed — otherwise skip)
+ ├─ frontend/
+ │   ├─ src/
+ │   │   ├─ components/
+ │   │   ├─ pages/
+ │   │   ├─ hooks/
+ │   │   ├─ firebase.js
+ │   │   ├─ App.jsx
+ │   │   ├─ main.jsx
+ │   ├─ index.html
+ ├─ package.json
+ ├─ README.md
+
+🔥 5. FUNCTIONAL REQUIREMENTS
+Notes Schema
+{
+  "title": "string",
+  "content": "string",
+  "owner": "uid",
+  "collaborators": ["uid", ...],
+  "pinned": false,
+  "updatedAt": Timestamp,
+  "createdAt": Timestamp
+}
+
+Share Link
+
+Format: /share/note/:noteId?mode=view or mode=edit
+
+Permissions
+
+Owner = full control
+
+Editor = can update
+
+Viewer = read-only
+
+🔥 6. UX REQUIREMENTS
+
+Clean, simple UI
+
+No dark mode required for MVP
+
+Should look like a minimal Google Keep + Notion hybrid
+
+🔥 7. WHAT THE AI MUST GENERATE
+
+Complete working codebase
+
+All React pages & components
+
+Firebase config integration
+
+Auto-save logic
+
+Share-link logic
+
+Permission checks
+
+Export PDF/TXT utilities
+
+Real-time collaboration logic
+
+README with setup steps
+
+Final downloadable project directory
