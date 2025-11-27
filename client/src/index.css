@@ -43,9 +43,9 @@
   --chart-3: 280 75% 50%;
   --chart-4: 140 70% 45%;
   --chart-5: 340 75% 48%;
-  --font-sans: 'Lora', serif;
-  --font-serif: 'Geist', sans-serif;
-  --font-mono: 'Space Grotesk', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Lora', serif;
+  --font-mono: 'JetBrains Mono', monospace;
   --radius: 0.875rem;
   --shadow-2xs: 0px 2px 0px 0px hsl(0 0% 0% / 0.00);
   --shadow-xs: 0px 2px 0px 0px hsl(0 0% 0% / 0.00);
